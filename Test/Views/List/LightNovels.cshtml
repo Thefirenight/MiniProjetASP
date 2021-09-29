@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "LightNovels";
+    @model Test.Models.DataModel.Rootobject
+}
+<div class="container table-responsive-sm">
+    <table class="table table-hover table-condensed">
+        <caption>Liste des LightNovels</caption>
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col" colspan="3">Nom</th>
+                <th scope="col" colspan="5">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var ln in Model.listLightNovels)
+                {
+                    <tr>
+                        <th scope="row">@ln.ID</th>
+                        <td colspan="3">@ln.Name</td>
+                        <td colspan="5">@ln.Description</td>
+                        <td><a class="btn btn-info" href="@Url.Action("lnDetails", "Detail", new { id = ln.ID })" role="button">+Info</a></td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+
+
+</div>

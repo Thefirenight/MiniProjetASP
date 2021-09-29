@@ -1,0 +1,55 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+body {
+    font: 13px Montserrat, sans-serif;
+    line-height: 1.8;
+}
+p {
+    font-size: 16px;
+}
+.margin {
+    margin-bottom: 45px;
+}
+.bgf {
+    margin-top: 20px;
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+}
+.navbar {
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.bottomleft {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    right: 12px;
+    padding-right: 20px;
+    font-size: 10px;
+    position: absolute;
+    background-color: black;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    color: white;
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+        text-decoration: none;
+        color: white;
+}

@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "wnDetails";
+    @model Test.Models.DataModel.WebNovel
+}
+
+<div class="container-fluid bg-1 text-center">
+    <table>
+        <tr>
+            <th colspan="9" class="text-center"><h2>@Model.Name</h2></th>
+        </tr>
+        <tr>
+            <td colspan="6" rowspan="6"> <img src="@Url.Content(Model.Image)" alt="@Model.ID" width="245" height="349"/></td>
+            <td colspan="3" class="text-left">Associated Names: @Model.Associated_Name</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-left">@Model.Genre</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-left">Author(s): @Model.Authors</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-left">Artist(s): @Model.Artits</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-left">Year: @Model.Year</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-left">Chapitre: @Model.Chapter</td>
+        </tr>
+        <tr>
+            <td colspan="9" rowspan="2">
+              <p>Description:<br>@Model.Description<br> </p>
+              <a class="btn btn-primary" href="@Model.Url">English Translation</a>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+</div>
+
+

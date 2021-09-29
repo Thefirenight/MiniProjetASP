@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+    @model Test.Models.DataModel.Rootobject
+}
+<div class="container-fluid  text-center">
+    <h3 class="margin">Light Novel </h3><br>
+    <center>
+        <div class="owl-carousel owl-theme" style="width: 50%;">
+            @{
+                var listln = Model.listLightNovels;
+                foreach (var ln in listln)
+                {
+                    int entier = ln.ID;
+                    <div class="item">
+                        <a href="@Url.Action("lnDetails", "Detail", new { id = ln.ID })">
+                            <img src="@Url.Content(ln.Image)" width="178" height="261" />
+                            <span class="bottomleft"> @ln.Name</span>
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+    </center>
+</div>
+
+
+<div class="container-fluid text-center">
+    <h3 class="margin">Web Nobel</h3><br>
+    <center>
+        <div class="owl-carousel owl-theme" style="width: 50%;">
+            @{
+                var listwn = Model.listWebNovels;
+                foreach (var wn in listwn)
+                {
+                    <div class="item">
+                        <a href="@Url.Action("wnDetails", "Detail", new { id = wn.ID })">
+                            <img src="@Url.Content(wn.Image)" width="178" height="261" />
+                            <span class="bottomleft"> @wn.Name</span>
+                        </a>
+                    </div>
+                }
+
+            }
+        </div>
+    </center>
+</div>
+
+<div class="container-fluid  text-center">
+    <h3 class="margin">Mangas</h3><br>
+    <center>
+        <div class="owl-carousel owl-theme" style="width: 50%;">
+            @{
+                var listmangas = Model.listLightNovels;
+                foreach (var manga in listmangas)
+                {
+                    <div class="item">
+                        <a href="@Url.Action("mangaDetails", "Detail", new { id = manga.ID })">
+                            <img src="@Url.Content(manga.Image)" width="178" height="261" />
+                            <span class="bottomleft"> @manga.Name</span>
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+    </center>
+</div>
+
+
+
